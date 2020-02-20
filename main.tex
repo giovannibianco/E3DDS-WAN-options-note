@@ -107,7 +107,7 @@ John White (NeIC) {\tt john.white@cern.ch}}}
 \section{Wide-Area Network options considerations}
 \label{sec:wan-options}
 
-The \ED sites need to be connected over a Wide-Area Network (WAN).
+The \ED sites need to be connected over a Wide-Area Network (WAN)~\footnote{A WAN is any network that is not internal to a site.}.
 The WAN must meet capacity and latency requirements to transmit the data produced at the \ED sites, control updates, as well as general remote management, connectivity to the long-term data center storage and direct or indirect connectivity to the internet for users.
 
 The requirement for \ED operations is that the data for \NBW\ case is processed in real-time from antennas to data storage.
@@ -239,6 +239,7 @@ A key advantage to DWDM is that it is protocol and bit-rate independent.
 DWDM-based networks can transmit data in IP and other protocols and can handle bit rates between 100~Mb/s and 2.5~Gb/s. 
 Therefore, DWDM-based networks can carry different types of traffic at different speeds over an optical channel.
 From a Quality of Service standpoint, DWDM-based networks create a lower cost way to quickly respond to bandwidth demands and protocol changes.
+% In this case, the proposed equipment provides DWDM waves each with a capacity of 400~Gb/s.
 
 \subsubsection{Option 1}
 Here DWDM is used to connect the three \ED sites to a central location.
@@ -260,7 +261,9 @@ Working backwards, from prompt computing to FSRUs, along the online data process
 \subsubsection{Option 2a}
 \label{sssec:option2a}
 
-Here the capacity of the DWDM connection is sized such that the \RB\ nodes are located in the central computing location.
+Here the capacity of the DWDM connection is sized such that the
+\einfra for the 
+online data processing chain from \RB\ nodes onwards is located in a central computing location i.e. there is computing or storage capacity on the remote sites.
 The FSRUs connect to an ethernet switching fabric that subsequently connects to the optical WAN as shown in Figure~\ref{fig:option_2a}.
 \begin{figure}[h]
 \centering
@@ -268,11 +271,15 @@ The FSRUs connect to an ethernet switching fabric that subsequently connects to 
 \caption{Site connections.\label{fig:option_2a}
 }
 \end{figure}
-Each DWDM wave has a capacity of 400~Gb/s.
-As shown in Section~\ref{}
+From Table~\ref{tab:fsru-rates-all}, it can be seen that the capacity between the remote and central sites must be able to handle the data rate from FSRUs in \WBW\ operation mode from RX sites i.e. $\approx 1.1$~Tb/s.
+If the maximum beams at \WBW\ are produced then the capacity required is $\approx 3.6$~Tb/s.
+
+% As shown in Section~\ref{}
 
 \subsubsection{Option 2b}
 \label{sssec:option2b}
+This optical DWDM WAN option, shown in Figure~\ref{fig:option_2b}, is similar to Section~\ref{sssec:option2a} in concept, except that the FSRUs are connected directly to the optical network.
+The ethernet-optical switches at the remote and central sites are omitted.
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{photon_option_2b.png}
@@ -283,7 +290,14 @@ As shown in Section~\ref{}
 \section{Site computing}
 \label{sec:site-comp}
 
+A consideration when connecting the \ED sites over WAN is the overall network cost compared to the savings in operational costs.
+
+A main driver to 
+
 From E3DDS documents such as~\cite{}
+
+\input{site-computing}
+
 \newpage
 \bibliography{main}{}
 \bibliographystyle{unsrt}
