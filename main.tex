@@ -228,7 +228,7 @@ This implies a maximum data rate of 33~Gb/s simultaneous output from each site.
 This WAN option requires that the first and second beam forming are performed at each site.
 Depending on the output rate of the prompt computing processing, this could be situated at a centralized location on the IP-routed ring.
 
-\subsection{Optical connections}
+\subsection{Optical DWDM connections}
 \label{ssec:optical}
 
 The Dense Wavelength Division Multiplexing~\cite{dwdm} (DWDM), an optical technology used to increase bandwidth over existing fiber optic backbones, provides an attractive alternative for connecting the \ED sites.
@@ -240,7 +240,7 @@ DWDM-based networks can transmit data in IP and other protocols and can handle b
 Therefore, DWDM-based networks can carry different types of traffic at different speeds over an optical channel.
 From a Quality of Service standpoint, DWDM-based networks create a lower cost way to quickly respond to bandwidth demands and protocol changes.
 
-\subsubsection{DWDM Option 1}
+\subsubsection{Option 1}
 Here DWDM is used to connect the three \ED sites to a central location.
 \label{sssec:option1}
 \begin{figure}[h]
@@ -257,7 +257,7 @@ Working backwards, from prompt computing to FSRUs, along the online data process
 \item The output data rate of the FSRUs, on RX sites in \NBW\ mode, to \RB\ memory is too large (see Table~\ref{tab:sbf-rates-all}) for such a WAN.
 \eitm
 
-\subsubsection{DWDM Option 2a}
+\subsubsection{Option 2a}
 \label{sssec:option2a}
 
 Here the capacity of the DWDM connection is sized such that the \RB\ nodes are located in the central computing location.
@@ -279,6 +279,9 @@ As shown in Section~\ref{}
 \caption{Site connections.\label{fig:option_2b}
 }
 \end{figure}
+
+\section{Site computing}
+\label{sec:site-comp}
 
 \newpage
 \bibliography{main}{}
