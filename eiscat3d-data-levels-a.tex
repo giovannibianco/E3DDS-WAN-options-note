@@ -1,0 +1,32 @@
+% \begin{center}
+\begin{table}[h]
+% \begin{center}
+\centering
+\begin{tabular}{l|l l l c}
+{Level} & {Type}        & {Produced by} &  {Storage } & {Format} \\ \hline
+% \bf 0  & Sampled antenna        & Antenna & None & Binary \\
+%        & voltages               & sub-arrays & & \\
+\bf 1a & Ring buffer data                & $1^{\rm st}$ stage beam & 4 months$^*$ & UDP stream/ \\
+       &                                 & former &  & HDF5  \\
+\bf 1b & Beam-formed data                & $2^{\rm nd}$ stage beam & 4 months$^*$ & HDF5 \\
+       &                                 & former & &  \\
+\bf 2  & Time integrated                 & All sites & Archived & \HDF \\
+       & correlated data & & & \\
+\bf 3a & Physical parameters             & All sites & Archived & \HDF \\
+\bf 3b & 3D-voxel parameters             & Operations centre & Archived & \HDF \\
+\bf 4  & Derived geophysical & Users & Users & Publications etc \\
+       & parameters & & & 
+\end{tabular}
+\caption{Summary of the \ED data levels. 
+The \ED \DCs will receive, serve and archive all data at levels 2 and 3.
+{Data used in research should be given Persistent Identifiers (PIDs) according to a common standard such as DOI, DataCite, or similar, to be unambiguously citable in publications.}
+(*)~A 4~months period is selected as this is the estimated time required
+to perform a ``real-time'' analysis on low-level data.
+A portion of the 
+level~1 data will also be archived permanently, on the order of $1\%$
+of the level~1 data rate, e.g. one beam per site and/or bandwidth-limited
+data.
+\label{tab:datalevels}}
+% \end{center}
+\end{table}
+% \end{center}

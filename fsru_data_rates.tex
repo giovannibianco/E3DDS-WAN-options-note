@@ -1,0 +1,39 @@
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccrll|r}
+{Bandwidth} & {Beams} & {Bits $\times$}    & Rate    & Sub- & {Total rate} \\
+{(digital samples)} & {/FSRU} & {Polarities}       & {/FSRU} & arrays & from site \hfill \\ \hline
+& \multicolumn{5}{l}{\bf TX site \NBW\ operations} \\
+{\hfill \NBW{} (6.5~MSPS)}& 2 & (16+16)$\times$2 & 830~Mb/s & 119 & 99~Gb/s \\
+& \multicolumn{5}{l}{\bf TX site \WBW\ operations} \\
+\WBW{} (52~MSPS)& 2 & (16+16)$\times$2 & {\hfill 6.66~Gb/s} & 119 & 792~Gb/s \\
+& \multicolumn{5}{l}{\bf RX site \NBW\ operations} \\
+{\hfill \NBW{} (6.5~MSPS)} & 10 & (16+16)$\times$2 & 4.16~Gb/s & 109 & 450~Gb/s \\
+% \WBW{} (52 MSPS) & 2 & (16+16)$\times$2 & 6.66~Gb/s & 109 & 730~Gb/s \\
+& \multicolumn{5}{l}{\bf RX site \WBW\ operations} \\
+{\hfill \NBW{} (6.5~MSPS)} & 8 & (16+16)$\times$2 & 3.33~Gb/s & 109 & 363~Gb/s \\
+\WBW{} (52 MSPS) & 2 & (16+16)$\times$2 & 6.66~Gb/s & 109 & 726~Gb/s \\
+& \multicolumn{5}{l}{\bf Maximum rate \WBW} \\
+\WBW{} (52 MSPS) & 10 & (16+16)$\times$2 & 33.3~Gb/s & 109 & 3.63~Tb/s \\
+\end{tabular}
+\caption{Data rates at \ED sites per FSRU and for whole site to the Ring Buffer memory.
+\label{tab:fsru-rates-all}}
+\end{table}
+\iffalse
+\begin{table}[h!]
+\centering
+\begin{tabular}{cccrll|r}
+{Site } & {Bandwidth} & {Beams} & {Bits $\times$}    & Rate    & Sub- & {Total rate} \\
+& {(digital samples)} & {/FSRU} & {Polarities}       & {/FSRU} & arrays & from site \hfill \\ \hline
+{TX} & {\hfill \NBW{} (6.5~MSPS)}& 2 & (16+16)$\times$2 & 830~Mb/s & 119 & 99~Gb/s \\
+TX & \WBW{} (52~MSPS)& 2 & (16+16)$\times$2 & {\hfill 6.66~Gb/s} & 119 & 792~Gb/s \\
+RX & {\hfill \NBW{} (6.5~MSPS)} & 10 & (16+16)$\times$2 & 4.16~Gb/s & 109 & 450~Gb/s \\
+RX & {\hfill \NBW{} (6.5~MSPS)} & 8 & (16+16)$\times$2 & 3.33~Gb/s & 109 & 363~Gb/s \\
+ & \WBW{} (52 MSPS) & 2 & (16+16)$\times$2 & 6.66~Gb/s & 109 & 726~Gb/s \\
+ & & \multicolumn{5}{l}{\bf Maximum rate \WBW} \\
+ & \WBW{} (52 MSPS) & 10 & (16+16)$\times$2 & 33.3~Gb/s & 109 & 3.63~Tb/s \\
+\end{tabular}
+\caption{Data rates at \ED sites per FSRU and for whole site to the Ring Buffer memory.
+\label{tab:fsru-rates-all}}
+\end{table}
+\fi
