@@ -28,6 +28,8 @@
 
 \usepackage[gen]{eurosym}
 
+\usepackage{amssymb}
+
 % \usepackage{todonotes}
 \usepackage[colorinlistoftodos,prependcaption,textsize=small]{todonotes}
 \newcommand{\tobedone}[2][1=]{\todo[inline,linecolor=red,backgroundcolor=red!25,bordercolor=red]{#2}}
@@ -291,8 +293,12 @@ The ethernet-optical switches at the remote and central sites are omitted.
 \label{sec:site-comp}
 
 A consideration when connecting the \ED sites over WAN is the overall network cost compared to the savings in operational costs.
-
-A main driver to 
+Locating computing clusters at the RX site(s) will incur an operational cost. Although, this cost can be mitigated by use of cluster management software and techniques.
+The majority of operations on a cluster are performed remotely.
+Only hardware-related issues such as failures and upgrades need to be addressed with the physical presence of personnel. 
+Table~\ref{tab:site-computing} shows the various computing \einfra elements that must be present on a RX site according to each WAN scenario.
+Typically the warranty and service contracts of computing hardware (servers) are priced per unit.
+Therefore the price will not be appreciably different if the computing servers are distributed over RX sites or located in one central site.
 
 From E3DDS documents such as~\cite{}
 

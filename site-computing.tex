@@ -1,13 +1,14 @@
+\newcommand{\cmy}{\checkmark}
 \begin{table}[h!]
 \centering
-\begin{tabular}{l|llllll}
-{WAN type} & {Ethernet} & {RBBF} & {Prompt} & {White} & {Cluster} & {Environment} \\
-           & Router & Nodes & Nodes & Rabbit & Management & Monitoring \\ \hline
-IP         & X & X & X & X & X & X \\
-Optical 1  & X & X & & X & X & \\
-Optical 2a & X & & & X & & \\
-Optical 2b &   & & & X & & \\
+% \begin{tabular}{l|llllll}
+\begin{tabular}{l|ccccccc}
+{WAN type} & {Optical} & {Ethernet} & {RBBF} & {Prompt} & {White} & {Cluster} & {Environment} \\
+           &  & Router & Nodes & Nodes & Rabbit & Management & Monitoring \\ \hline
+IP         & & \cmy & \cmy & \cmy & \cmy & \cmy & ? \\
+Optical 1  & \cmy & \cmy & \cmy & & \cmy & \cmy & \\
+Optical 2a & \cmy & \cmy & & & \cmy & & \\
+Optical 2b & \cmy &   & & & \cmy & & \\
 \end{tabular}
-\caption{Data rates at \ED sites per FSRU and for whole site to the Ring Buffer memory.
-\label{tab:site-computing}}
+\caption{The various computing \einfra elements required (\cmy) to be located on the R\cmy sites according to each WAN deployment option.\label{tab:site-computing}}
 \end{table}
